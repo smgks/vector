@@ -1,0 +1,36 @@
+object aboutinfo: Taboutinfo
+  Left = 422
+  Height = 350
+  Top = 219
+  Width = 450
+  BorderStyle = bsNone
+  Caption = 'aboutinfo'
+  ClientHeight = 350
+  ClientWidth = 450
+  Color = clBlack
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.4'
+  object PaintBox1: TPaintBox
+    Left = 0
+    Height = 350
+    Top = 0
+    Width = 450
+    Align = alClient
+    OnPaint = PaintBox1Paint
+  end
+  object Button1: TButton
+    Left = 200
+    Height = 50
+    Top = 152
+    Width = 50
+    Caption = 'Close'
+    Color = clMenuText
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Timer1: TTimer
+    Interval = 32
+    OnTimer = Timer1Timer
+    left = 422
+  end
+end

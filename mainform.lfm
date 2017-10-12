@@ -1,0 +1,146 @@
+object Vector: TVector
+  Left = 316
+  Height = 450
+  Top = 146
+  Width = 450
+  Caption = 'Vector'
+  ClientHeight = 421
+  ClientWidth = 450
+  Constraints.MinHeight = 450
+  Constraints.MinWidth = 450
+  KeyPreview = True
+  Menu = MainMenu
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  LCLVersion = '1.8.0.4'
+  object body: TPanel
+    Left = 0
+    Height = 386
+    Top = 35
+    Width = 450
+    Align = alClient
+    ClientHeight = 386
+    ClientWidth = 450
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    object PaintBox: TPaintBox
+      Left = 1
+      Height = 384
+      Top = 1
+      Width = 448
+      Align = alClient
+      OnMouseDown = PaintBoxMouseDown
+      OnMouseMove = PaintBoxMouseMove
+      OnMouseUp = PaintBoxMouseUp
+      OnPaint = PaintBoxPaint
+    end
+  end
+  object head: TPanel
+    Left = 0
+    Height = 35
+    Top = 0
+    Width = 450
+    Align = alTop
+    ClientHeight = 35
+    ClientWidth = 450
+    TabOrder = 1
+    object Colorcur: TColorBox
+      Left = 0
+      Height = 35
+      Top = 0
+      Width = 240
+      DefaultColorColor = clRed
+      NoneColorColor = clDefault
+      Selected = clRed
+      Color = clWhite
+      ItemHeight = 0
+      OnChange = ColorcurChange
+      TabOrder = 0
+    end
+    object Buttoncolor: TButton
+      Left = 240
+      Height = 35
+      Top = 0
+      Width = 40
+      Caption = 'color'
+      OnClick = ButtoncolorClick
+      TabOrder = 1
+    end
+    object linelen: TSpinEdit
+      Left = 344
+      Height = 25
+      Top = 0
+      Width = 48
+      MaxValue = 500
+      MinValue = 1
+      TabOrder = 2
+      Value = 1
+    end
+    object Buttonbcg: TButton
+      Left = 280
+      Height = 35
+      Top = 0
+      Width = 64
+      Caption = 'bcgcolor'
+      OnClick = ButtonbcgClick
+      TabOrder = 3
+    end
+    object linewidth: TSpinEdit
+      Left = 392
+      Height = 25
+      Top = 0
+      Width = 48
+      MinValue = 1
+      TabOrder = 4
+      Value = 1
+    end
+  end
+  object ColorDialog: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 798
+  end
+  object MainMenu: TMainMenu
+    left = 768
+    object Menufile: TMenuItem
+      Caption = 'file'
+      object Menusave: TMenuItem
+        Caption = 'save'
+        Enabled = False
+      end
+      object Menuopen: TMenuItem
+        Caption = 'open'
+        Enabled = False
+      end
+    end
+    object info: TMenuItem
+      Caption = 'info'
+      object about: TMenuItem
+        Caption = 'about'
+        OnClick = aboutClick
+      end
+    end
+  end
+end
